@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
   })
 })
 
-router.post('/api/items', (req, res) => {
+router.post('/', (req, res) => {
   const {name, picture} = req.body
   const query = 'INSERT INTO items (name, picture) VALUES (?,?)'
   const selectQuery = 'SELECT * FROM items WHERE id = ?'
