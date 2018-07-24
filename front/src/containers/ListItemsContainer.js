@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ListItems from '../components/ListItems'
-import FormItem from './FormItem'
+// import FormItem from './FormItem'
 
 class ListItemsContainer extends Component {
   state = {
@@ -16,13 +16,14 @@ class ListItemsContainer extends Component {
   }
 
   render () {
-    return 
+    return (
     <div>
       <ListItems
         items={this.state.items}  />
-      <FormItem />
+      {/* <FormItem 
+        items={this.state.items}/> */}
     </div>
-  }
+    )}
 }
 
 export default ListItemsContainer
