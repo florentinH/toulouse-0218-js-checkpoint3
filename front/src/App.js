@@ -1,31 +1,31 @@
 import React, { Component } from 'react'
-import Item from './Item'
+import { BrowserRouter, Route } from 'react-router-dom'
+
+import ListItemsContainer from './containers/ListItemsContainer'
 import './PlayaList.css'
 import logo from './mojito.ico'
 
-const items = [
-  {
-    name: 'Tongs',
-    picture: '/images/tongs.jpg'
-  },
-  {
-    name: 'Ballon de plage',
-    picture: '/images/ballon.jpg'
-  },
-  {
-    name: 'Raquettes de plage',
-    picture: '/images/raquettes.jpg'
-  },
-  {
-    name: 'Bouée grenouille',
-    picture: '/images/bouee-grenouille.jpg'
-  },
-]
+// const items = [
+//   {
+//     name: 'Tongs',
+//     picture: '/images/tongs.jpg'
+//   },
+//   {
+//     name: 'Ballon de plage',
+//     picture: '/images/ballon.jpg'
+//   },
+//   {
+//     name: 'Raquettes de plage',
+//     picture: '/images/raquettes.jpg'
+//   },
+//   {
+//     name: 'Bouée grenouille',
+//     picture: '/images/bouee-grenouille.jpg'
+//   },
+// ]
 
 class App extends Component {
-  state = {
-    items: []
-  }
+ 
 
   handleSubmit = () => {
 
@@ -52,14 +52,17 @@ class App extends Component {
             </div>
           </form>
         </div>*/}
-
-        <div className="PlayaList-list">
-          <Item item={items[0]} />
+        <BrowserRouter>
+          <div className="PlayaList-list">
+          {/* <Switch> */}
+            <Route exact path="/" component={ListItemsContainer} />
+          {/* </Switch> */}
+          {/* <Item item={items[0]} />
           <Item item={items[1]} />
           <Item item={items[2]} />
-          <Item item={items[3]} />
-        </div>
-
+          <Item item={items[3]} /> */}
+          </div>
+        </BrowserRouter>
       </div>
     )
   }

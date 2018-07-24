@@ -7,5 +7,5 @@ app.use(bodyParser.json())
 // Lier itemsRouter aux URL commençant par /api/items
 app.use('/api/items', itemsRouter)
 
-console.log('Listening on port 4000')
-app.listen(4000)
+console.log('Listening on port 6000')
+app.listen(6000)
