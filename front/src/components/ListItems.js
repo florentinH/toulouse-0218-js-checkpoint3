@@ -12,8 +12,7 @@ class ListItems extends Component {
     // const item = items.find(item => item.id === this.props.item.id)
     return (
       <div>
-        <FormItem 
-        items={items} />
+        <FormItem />
       {
         this.props.items.map(
           (item) => <Item  item={item}/>
